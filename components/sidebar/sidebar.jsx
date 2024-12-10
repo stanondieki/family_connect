@@ -25,7 +25,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/family-tree"
+            <Link href="/family_tree"
                className="flex items-center space-x-3 py-3 px-4 hover:bg-gray-700 rounded transition duration-300">
                 <FaTree className="text-2xl" />
                  Family Tree
