@@ -3,12 +3,12 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/f
 
 const Footer = () => {
   return (
-    <footer className="from-gray-800 to-black text-white-200 py-6">
+    <footer className="from-gray-800 to-black text-black py-6">
       <div className="container mx-auto px-6 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
           <div>
-            <h2 className="text-lg font-semibold mb-4">About</h2>
+            <h2 className="text-lg font-semibold mb-4 text-blue-600">About</h2>
             <p className="text-sm">
               My Family Tree is your go-to platform for tracing family heritage, designing family trees, and exploring connections between relatives. Join us in celebrating family history.
             </p>
@@ -16,18 +16,18 @@ const Footer = () => {
           {/* Navigation Section */}
           <div>
             <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-md">
               <li>
-                <a href="/about" className="hover:text-white transition">About Us</a>
+                <a href="/about" className="hover:text-blue-600 transition">About Us</a>
               </li>
               <li>
-                <a href="/help" className="hover:text-white transition">Help Center</a>
+                <a href="/help" className="hover:text-blue-600 transition">Help Center</a>
               </li>
               <li>
-                <a href="/privacy" className="hover:text-white transition">Privacy Policy</a>
+                <a href="/privacy" className="hover:text-blue-600 transition">Privacy Policy</a>
               </li>
               <li>
-                <a href="/contact" className="hover:text-white transition">Contact Us</a>
+                <a href="/contact" className="hover:text-blue-600 transition">Contact Us</a>
               </li>
             </ul>
           </div>
