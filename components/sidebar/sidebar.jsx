@@ -4,15 +4,15 @@ import { FaUserCircle, FaSearch, FaTree, FaSignOutAlt, FaEnvelope, FaCalendarAlt
 
 const Sidebar = () => {
   return (
-    <aside className="bg-gradient-to-b w-80 from-gray-800 to-black text-white flex-col shadow-lg min-h-screen overflow-hidden">
+    <aside className="bg-gradient-to-b w-80 from-gray-800 to-black text-white flex flex-col shadow-lg min-h-screen overflow-hidden">
       <div className="flex items-center justify-center py-6 border-b border-gray-700">
         FAMILY_CONNECT
       </div>
-      <nav className="flex-grow px-4 py-6">
+      <nav className="flex-grow px-4 py-6 overflow-hidden">
         <ul className="space-y-6">
           <li>
             <Link
-              href="/profile"
+              href="/profile/profile"
               className="flex items-center space-x-3 py-3 px-4 hover:bg-gray-700 rounded transition duration-300"
             >
               <FaUserCircle className="text-2xl" />
@@ -57,7 +57,7 @@ const Sidebar = () => {
           </li>
           <li>
             <Link
-              href="/profile"
+              href="/settings/settings"
               className="flex items-center space-x-3 py-3 px-4 hover:bg-gray-700 rounded transition duration-300"
             >
               <FaCog className="text-2xl" />
