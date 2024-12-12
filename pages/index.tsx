@@ -47,7 +47,7 @@ const IndexPage: React.FC = () => {
               title="Design Your Tree"
               description="Visualize your family tree and uncover connections between relatives."
               buttonText="Create Tree"
-              onClick={() => (window.location.href = './create_tree')}
+              onClick={() => (window.location.href = '/createT/create_tree')}
             />
             <Card
               title="Family Insights"
