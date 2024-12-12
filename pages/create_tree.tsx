@@ -1,4 +1,3 @@
-// pages/CreateTreePage.tsx
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { doc, setDoc } from 'firebase/firestore';
@@ -20,7 +19,7 @@ const CreateTreePage: React.FC = () => {
       alert('Please provide a name.');
       return;
     }
-  
+
     if (!isRootSet) {
       const rootNode = {
         id: uuidv4(),
@@ -37,14 +36,14 @@ const CreateTreePage: React.FC = () => {
         alert('Please select a relationship.');
         return;
       }
-  
+
       const newNode = {
         id: uuidv4(),
         name,
         relationship,
         children: [],
       };
-  
+
       const updateTree = (node: any) => {
         if (node.id === selectedNodeId) {
           node.children = [...(node.children || []), newNode];
@@ -52,13 +51,13 @@ const CreateTreePage: React.FC = () => {
           node.children.forEach(updateTree);
         }
       };
-  
+
       if (treeData) {
         const updatedTree = { ...treeData };
         updateTree(updatedTree);
         setTreeData(updatedTree);
       }
-  
+
       setName('');
       setRelationship('');
     }
@@ -69,21 +68,30 @@ const CreateTreePage: React.FC = () => {
       alert('Please create a family tree before saving.');
       return;
     }
-  
+
     setIsSaving(true);
-  
+
     try {
       await setDoc(doc(db, 'familyTrees', treeData.id), {
         treeData,
         createdAt: new Date().toISOString(),
       });
       alert('Family tree saved successfully!');
+      resetForm(); // Clear form and reset state after saving
     } catch (error) {
       console.error('Error saving family tree:', error);
       alert('Failed to save the family tree. Please try again.');
     } finally {
       setIsSaving(false);
     }
+  };
+
+  const resetForm = () => {
+    setTreeData(null);
+    setIsRootSet(false);
+    setName('');
+    setRelationship('');
+    setSelectedNodeId(null);
   };
 
   return (
