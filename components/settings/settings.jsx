@@ -117,14 +117,14 @@ const Settings = () => {
           </div>
 
           {/* Advanced Settings */}
-          <div className="grid grid-cols-1 md:grid-cols-2 bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mt-8 mr-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 bg-white dark:bg-gray-800 mt-8" >
           {/* Advanced Settings */}
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 gap-6 mt-8 ">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow gap-6 mt-8 " style={{paddingRight:'20px'}}>
             <div
               onClick={() => setIsAdvancedOpen(!isAdvancedOpen)}
               className="flex justify-between items-center cursor-pointer mb-4"
             >
-              <h2 className="text-2xl font-semibold">Advanced Settings</h2>
+              <h2 className="text-2xl font-semibold" style={{paddingLeft:'20px', marginTop:'10px'}}>Advanced Settings</h2>
               <span className="text-lg font-medium">{isAdvancedOpen ? '-' : '+'}</span>
             </div>
 
@@ -168,7 +168,7 @@ const Settings = () => {
           </div>
 
           {/* Download Tree */}
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 flex flex-col justify-between mt-8">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6 flex flex-col justify-between mt-8">
             <h2 className="text-2xl font-semibold mb-4">Download Family Tree</h2>
             <p className="text-lg mb-4">
               Download a copy of your family tree in a printable format.
@@ -241,30 +241,6 @@ const Settings = () => {
             )}
           </div>
         </div>
-  )
-
-        {/* Bottom Action Buttons */}
-        <div className="w-full flex justify-between py-6 px-4 sm:px-10 lg:px-20">
-          {/* Reset Button */}
-          <button
-            onClick={() => window.location.reload()}
-            className="flex items-center gap-2 px-6 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700"
-          >
-            <FaRedoAlt /> Reset Settings
-          </button>
-
-          {/* Download Button */}
-          <button
-           
-
-          onClick={() => alert('Downloading Family Tree...')}
-          className="flex items-center gap-2 px-6 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700"
-        >
-          <FaDownload /> Download Tree
-        </button>
-      </div>
-    
-  
+  )  
 };
-
 export default Settings;

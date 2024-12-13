@@ -45,7 +45,7 @@ const ProfilePage = () => {
             <FaCog className="text-blue-600" /> Settings
           </h2>
           <p className="text-lg mb-4">Update your preferences and account settings.</p>
-          <Link href="/settings">
+          <Link href="/settings/settings">
             <button className="w-full py-2 px-4 bg-green-600 text-white rounded hover:bg-green-700 transition duration-300">
               Go to Settings
             </button>
