@@ -15,8 +15,15 @@
     "incremental": true,
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "types": ["react", "react-dom"]  
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/sidebar/sidebar.jsx", "pages/profile/profile.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/sidebar/sidebar.jsx",
+    "pages/profile/profile.jsx"
+  ],
   "exclude": ["node_modules"]
 }
