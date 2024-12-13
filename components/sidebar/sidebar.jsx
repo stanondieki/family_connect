@@ -9,6 +9,7 @@ import {
   FaEnvelope,
   FaCalendarAlt,
   FaCog,
+  FaSignInAlt, // Import the login icon
 } from 'react-icons/fa';
 
 const Sidebar = ({ onSearchClick }) => {
@@ -80,6 +81,17 @@ const Sidebar = ({ onSearchClick }) => {
             >
               <FaCog className="text-2xl" />
               <span className="text-lg">Settings</span>
+            </Link>
+          </li>
+
+          {/* Login Button */}
+          <li>
+            <Link
+              href="/Auth/signin"
+              className="flex items-center space-x-3 py-3 px-4 hover:bg-gray-700 rounded transition duration-300"
+            >
+              <FaSignInAlt className="text-2xl" />
+              <span className="text-lg">Login</span>
             </Link>
           </li>
         </ul>
