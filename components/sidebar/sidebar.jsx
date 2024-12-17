@@ -14,7 +14,7 @@ import {
 
 const Sidebar = ({ onSearchClick }) => {
   return (
-    <aside className="bg-gradient-to-b fixed w-80 from-gray-800 to-black text-white flex flex-col shadow-lg min-h-screen overflow-hidden">
+    <aside className="bg-gradient-to-b w-80 from-gray-800 to-black text-white flex flex-col shadow-lg min-h-screen overflow-hidden">
       {/* Sidebar Title */}
       <div className="flex items-center justify-center py-6 border-b border-gray-700">
         FAMILY_CONNECT
