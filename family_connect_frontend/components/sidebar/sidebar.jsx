@@ -46,7 +46,7 @@ const Sidebar = ({ onSearchClick }) => {
 
           <li>
             <Link
-              href="/family_tree"
+              href="/familyT/family_tree"
               className="flex items-center space-x-3 py-3 px-4 hover:bg-gray-700 rounded transition duration-300"
             >
               <FaTree className="text-2xl" />
