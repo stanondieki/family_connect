@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { collection, doc, getDocs, updateDoc } from 'firebase/firestore';
-import { db } from '@/firebase/firebaseConfig'; // Adjust the path as needed
+import { db } from '@/firebase/firebaseConfig';
 import dynamic from 'next/dynamic';
 
 const Tree = dynamic(() => import('react-organizational-chart').then((mod) => mod.Tree), { ssr: false });
@@ -82,6 +82,7 @@ const FamilyTreesPage: React.FC = () => {
 
     setFamilyTrees(updatedTrees);
 
+    // Update Firestore
     try {
       const updatedTree = updatedTrees.find((tree) => tree.id === editTreeId);
       if (updatedTree) {
@@ -93,6 +94,7 @@ const FamilyTreesPage: React.FC = () => {
       alert('Failed to save changes. Please try again.');
     }
 
+    // Clear edit state
     setEditingNode(null);
     setEditedName('');
     setEditedRelationship('');
@@ -137,6 +139,7 @@ const FamilyTreesPage: React.FC = () => {
         </div>
       )}
 
+      {/* Edit Modal */}
       {editingNode && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white text-black p-6 rounded-lg w-96">
