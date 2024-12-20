@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { collection, doc, getDocs, updateDoc } from 'firebase/firestore';
-import { db } from '@/firebase/firebaseConfig';
+import { db } from '@/firebase/firebaseConfig'; // Adjust the path as needed
 import dynamic from 'next/dynamic';
 
 const Tree = dynamic(() => import('react-organizational-chart').then((mod) => mod.Tree), { ssr: false });
