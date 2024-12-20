@@ -49,19 +49,36 @@ const SignUp = () => {
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
+                <div className="flex space-x-4">
+                    <div className="flex-1">
                         <label htmlFor="username" className="block text-sm font-medium text-gray-700">Username</label>
                         <input 
-                            id="username" 
-                            name="username" 
-                            type="text" 
-                            placeholder="Enter your username" 
-                            value={formData.username} 
-                            onChange={handleChange} 
-                            className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" 
-                            required 
+                        id="username" 
+                        name="username" 
+                        type="text" 
+                        placeholder="Enter Username" 
+                        value={formData.username} 
+                        onChange={handleChange} 
+                        className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" 
+                        required 
                         />
                     </div>
+                    <div className="flex-1">
+                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <input 
+                        id="phone" 
+                        name="phone" 
+                        type="text" 
+                        placeholder="Enter Phone Number" 
+                        value={formData.phone} 
+                        onChange={handleChange} 
+                        className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" 
+                        required 
+                        />
+                    </div>
+                    
+                    </div>
+
 
                     <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
