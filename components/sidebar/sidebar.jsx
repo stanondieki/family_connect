@@ -83,17 +83,6 @@ const Sidebar = ({ onSearchClick }) => {
               <span className="text-lg">Settings</span>
             </Link>
           </li>
-
-          {/* Login Button */}
-          <li>
-            <Link
-              href="/Auth/signin"
-              className="flex items-center space-x-3 py-3 px-4 hover:bg-gray-700 rounded transition duration-300"
-            >
-              <FaSignInAlt className="text-2xl" />
-              <span className="text-lg">Login</span>
-            </Link>
-          </li>
         </ul>
       </nav>
 
@@ -109,7 +98,7 @@ const Sidebar = ({ onSearchClick }) => {
 };
 
 Sidebar.propTypes = {
-  onSearchClick: PropTypes.func.isRequired, // Validation for the prop
+  onSearchClick: PropTypes.func.isRequired,
 };
 
 export default Sidebar;

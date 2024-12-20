@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
     "@mantine/core": "^7.15.1",
     "@mantine/hooks": "^7.15.1",
+    "@mantine/notifications": "^7.15.1",
+    "@mantine/styles": "^6.0.22",
     "axios": "^1.7.9",
     "firebase": "^11.0.2",
     "next": "15.0.4",
