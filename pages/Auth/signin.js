@@ -17,7 +17,7 @@ const Login = () => {
         setError(null);
 
         try {
-            const response = await axios.post('http://127.0.0.1:8000/api/auth/login/', formData);
+            const response = await axios.post('http://127.0.0.1:8000/api/auth/signin/', formData);
             alert(response.data.message);
         } catch (error) {
             alert(error.response.data.error);
