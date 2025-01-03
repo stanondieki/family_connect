@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 
 const SignUp = () => {
-    const [formData, setFormData] = useState({ username: '', email: '', password: '', confirmPassword: '' });
+    const [formData, setFormData] = useState({ username: '', phone: '', email: '', password: '', confirmPassword: '' });
     const [isLoading, setIsLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+    const router = useRouter();
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -25,13 +27,19 @@ const SignUp = () => {
             const response = await axios.post('http://127.0.0.1:8000/api/auth/signup/', { 
                 username: formData.username, 
                 email: formData.email, 
-                password: formData.password 
+                password: formData.password,
+                phone: formData.phone
             });
+            
             alert(response.data.message);
-            setFormData({ username: '', email: '', password: '', confirmPassword: '' });
+
+            router.push('/');
+            
         } catch (error) {
+            console.error(error.response || error); // Log the full error for debugging
             setErrorMessage(error.response?.data?.error || 'Something went wrong. Please try again.');
-        } finally {
+        }
+         finally {
             setIsLoading(false);
         }
     };
