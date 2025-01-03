@@ -8,7 +8,7 @@ const HomePage = () => {
 
   useEffect(() => {
     // Redirect to the Login page
-    router.push('/Auth/signin');  
+    router.push('/auth/signin');  
   }, [router]);
 
   return <div className='text-bold' style={{backgroundColor:'aqua', paddingLeft:'40px'}}>Redirecting To Login...</div>; 

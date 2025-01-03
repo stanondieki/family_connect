@@ -24,6 +24,6 @@
     "**/*.tsx",
     "components/sidebar/sidebar.jsx",
     "pages/profile/profile.jsx"
-  ],
+, "pages/auth/signin.js", "pages/auth/signup.js", "utils/api.js"  ],
   "exclude": ["node_modules"]
 }
